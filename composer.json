@@ -1,0 +1,29 @@
+{
+    "name": "planet/interview-challenge",
+    "description": "A programming challenge for potential recruits for the Gift Card Manager and Booking Engine projects.",
+    "type": "project",
+    "require": {
+        "php": "^7.4",
+        "codeception/codeception": "^4.2",
+        "codeception/module-asserts": "^2.0",
+        "codeception/module-db": "^2.1",
+        "codeception/module-rest": "^2.0",
+        "codeception/module-phpbrowser": "^2.0",
+        "mustangostang/spyc": "^0.6.3",
+        "smarty/smarty": "^5.4",
+        "wp-pay-gateways/abnamro-internetkassa": "*",
+        "intervention/gif": "^4.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Planet\\InterviewChallenge\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arttu Salonen",
+            "email": "arttu.salonen@wearegroup.com"
+        }
+    ]
+}
