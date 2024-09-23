@@ -15,4 +15,5 @@ You are left with simple instructions: "Make the tests pass, and provide a teste
 ## Further instructions
 - Fork this repository, and push all the changes that you make to your forked copy.
 - The instructions for how to run the app and the tests should be added to the repository's README.md file (this one).
+- **Important:** the file README.md **must** also describe which parts of your solution were not made from scratch - this includes but not limited to usign generative AI such as ChatGPT, copying code from StackOverflow or other online resource or using any other existing resources such as Google search results. If the entirety of your submission was made from the ground up by yourself, please state this as well.
 - Once finished, reach out to your recruitment contact in Planet to let them know you have finished the assignment.
