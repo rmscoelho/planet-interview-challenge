@@ -3,8 +3,8 @@
 namespace Planet\InterviewChallenge\Shop;
 
 use Exception;
-use Throwable;
 use Planet\InterviewChallenge\App;
+use Throwable;
 
 require_once(__DIR__.'/CartItem.php');
 
@@ -12,13 +12,20 @@ class Cart
 {
     private array $items;
 
+    /**
+     * @throws Throwable
+     */
     public function __construct()
     {
         $this->items = [];
 
         $params = json_decode($_GET['items'] ?? '[]');
 
-        while ($item = each($params)) {
+//        while ($item = each($params)) {
+//            $this->addItem(new CartItem((int)$item['value']->price, $this->valueToMode($item['value']->expires, $modifier), $modifier));
+//        }
+
+        foreach ($params as $item) {
             $this->addItem(new CartItem((int)$item['value']->price, $this->valueToMode($item['value']->expires, $modifier), $modifier));
         }
     }
@@ -67,9 +74,14 @@ class Cart
     {
         $objectStates = '[';
 
-        while ($item = each($this->items)) {
+//        while ($item = each($this->items)) {
+//            $objectStates .= $item['value']->getState() . ',';
+//        }
+
+        foreach ($this->items as $item) {
             $objectStates .= $item['value']->getState() . ',';
         }
+
         $objectStates = substr($objectStates, 0, -1);
         return $objectStates . ']';
     }

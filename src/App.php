@@ -1,7 +1,8 @@
 <?php
-
 namespace Planet\InterviewChallenge;
 
+use Planet\InterviewChallenge\Shop\Cart;
+use Smarty\Exception;
 use Smarty\Smarty;
 
 class App
@@ -13,6 +14,9 @@ class App
         return self::$smarty;
     }
 
+    /**
+     * @throws Exception
+     */
     public static function run(): void
     {
         // init
@@ -28,10 +32,11 @@ class App
 
         // run
         ob_start();
-        self::$smarty->assign('ShopCart', new \Planet\InterviewChallenge\Shop\Cart());
+        self::$smarty->assign('ShopCart', new Cart());
         self::$smarty->display('App.tpl');
         $render = ob_get_contents();
         ob_end_clean();
         print $render;
     }
+
 }

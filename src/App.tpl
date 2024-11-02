@@ -24,7 +24,9 @@
 
 <body>
 
-  {$ShopCart->display()}
+<h1>Hello</h1>
+
+{$ShopCart->display()}
   <script src="js/app.js"></script>
 
 </body>

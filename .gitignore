@@ -1,2 +1,14 @@
 /vendor/
 *~
+/.idea/.gitignore
+/.idea/active-tab-highlighter-v2.xml
+/.idea/codeception.xml
+/.idea/highlightedFiles.xml
+/.idea/material_theme_project_new.xml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/php-test-framework.xml
+/.idea/phpspec.xml
+/.idea/phpunit.xml
+/.idea/planet-interview-challenge.iml
+/.idea/vcs.xml
